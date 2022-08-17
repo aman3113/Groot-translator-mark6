@@ -31,6 +31,7 @@ img {
 textarea {
   width: 70%;
   height: 20vh;
+  padding: 10px;
 }
 
 #btn {
@@ -48,12 +49,14 @@ textarea {
   font-weight: bold;
 }
 
-#output {
+#output-el {
   width: 70%;
   height: 20vh;
   border: 1px black solid;
   background-color: white;
   margin: 10px auto;
+  text-align: left;
+  padding: 10px;
 }
 
 footer {
