@@ -1,15 +1,17 @@
-const inputEl = document.getElementById("input-el");
-const btn = document.getElementById("btn");
-const outputEl = document.getElementById("output-el");
+var inputText = document.querySelector("#input-el");
+var btn = document.querySelector("#btn");
+var outputText = document.querySelector("#output-el");
 var url = "https://api.funtranslations.com/translate/groot.json";
 
-function createURL(text) {
-  return url + "?text=" + text;
+function getServerURL(text) {
+  return encodeURI(url + "?text=" + text);
 }
 
-btn.addEventListener("click", function () {
-  var inputText = inputEl.value;
-  fetch(createURL(inputText))
-    .then((response) => response.json())
-    .then((json) => (outputEl.innerText = json.contents.translated));
+btn.addEventListener("click", () => {
+  fetch(getServerURL(inputText.value))
+    .then((result) => result.json())
+    .then((res) => {
+      var output = res.contents.translated;
+      outputText.innerText = output;
+    });
 });

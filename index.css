@@ -42,6 +42,10 @@ textarea {
   margin: 10px;
   font-size: large;
   border: rgb(201, 199, 199) solid 1px;
+  cursor: pointer;
+}
+#btn:hover {
+  background-color: rgb(19, 138, 19);
 }
 
 .text {
